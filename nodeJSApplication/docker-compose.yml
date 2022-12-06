@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  restapibootcam:
+    image: restapibootcam
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+
+  mongo_db:
+    container_name: mongoDB
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongoDB:/data/db
+  api:
+    build: .
+    ports :
+      - 4000:3000
+    environment:
+      PORT : 3000
+      MONGODB_URI : mongodb://mongoDB:27023
+      DB_NAME : local
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongodb:{}

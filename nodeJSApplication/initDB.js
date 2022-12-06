@@ -16,7 +16,7 @@ module.exports = () => {
     .catch(err => console.log(err.message));
 
   mongoose.connection.on('connected', () => {
-    console.log('Mongoose connected to db...');
+    console.log('Connected to db...');
   });
 
   mongoose.connection.on('error', err => {
@@ -24,13 +24,13 @@ module.exports = () => {
   });
 
   mongoose.connection.on('disconnected', () => {
-    console.log('Mongoose connection is disconnected...');
+    console.log('Connection is disconnected...');
   });
 
   process.on('SIGINT', () => {
     mongoose.connection.close(() => {
       console.log(
-        'Mongoose connection is disconnected due to app termination...'
+        'Connection is disconnected due to app termination...'
       );
       process.exit(0);
     });
