@@ -1,0 +1,67 @@
+###Get a list of all people
+GET http://localhost:3000/people
+
+### Create a product
+POST http://localhost:3000/people
+Content-Type: application/json
+
+{
+  "first_name": "iMac Pro",
+  "last_name": "iMac Pro",
+  "gender":"Male",
+  "class":6
+}
+
+### GET a product by id
+GET http://localhost:3000/people/5df118b3c86e5826958b661a
+
+### Update a product by id
+PATCH  http://localhost:3000/people/5df118b3c86e5826958b661a
+Content-Type: application/json
+
+{
+  "price": 5999
+}
+
+
+### Delete a product by id
+DELETE  http://localhost:3000/people/5df118b3c86e5826958b661a
+
+### 404 route Not Found
+GET http://localhost:3000/abc_xyz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#hrXWgw4Q127uqZJ3
