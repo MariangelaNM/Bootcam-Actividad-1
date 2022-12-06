@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  restapiyoutube:
-    image: restapiyoutube
+  restapibootcam:
+    image: restapibootcam
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -10,12 +10,13 @@ services:
       NODE_ENV: production
     ports:
       - 3000:3000
+
   mongo_db:
     container_name: mongoDB
     image: mongo:latest
     restart: always
     volumes:
-      - mongo_db:/data/db
+      - mongoDB:/data/db
   api:
     build: .
     ports :
@@ -28,4 +29,4 @@ services:
       - mongo_db
 
 volumes:
-  mongodb: {}
+  mongodb:{}

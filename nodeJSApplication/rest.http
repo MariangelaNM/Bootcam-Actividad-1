@@ -1,3 +1,6 @@
+### 404 route Not Found
+GET http://localhost:3000/abc_xyz
+
 ###Get a list of all people
 GET http://localhost:3000/people
 
@@ -20,15 +23,12 @@ PATCH  http://localhost:3000/people/638e8f0f07c6035050de7417
 Content-Type: application/json
 
 {
-  "price": 5999
+  "class":10
 }
-
 
 ### Delete a people by id
 DELETE  http://localhost:3000/people/638e8f0f07c6035050de7417
 
-### 404 route Not Found
-GET http://localhost:3000/abc_xyz
 
 
 

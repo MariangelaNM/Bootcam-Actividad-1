@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  restapiyoutube:
-    image: restapiyoutube
+  restapibootcam:
+    image: restapibootcam
     build:
       context: .
       dockerfile: ./Dockerfile
