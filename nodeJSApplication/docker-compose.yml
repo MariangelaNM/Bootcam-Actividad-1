@@ -12,21 +12,21 @@ services:
       - 3000:3000
 
   mongo_db:
-    container_name: mongoDB
+    container_name: mongo_db
     image: mongo:latest
     restart: always
     volumes:
-      - mongoDB:/data/db
+      - mongo_db:/data/db
   api:
     build: .
     ports :
       - 4000:3000
     environment:
       PORT : 3000
-      MONGODB_URI : mongodb://mongoDB:27023
+      MONGODB_URI : mongodb://mongo_db:27017
       DB_NAME : local
     depends_on:
       - mongo_db
 
 volumes:
-  mongodb:{}
+    mongo_db: {}
