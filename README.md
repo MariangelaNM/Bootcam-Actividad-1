@@ -1,4 +1,11 @@
 # Bootcam-Actividad-1
+
+¿Que hace este proyecto?
+    Conectarse a un mongo dockerizado y crear una ruta que, mediante un GET, devuelva todos los documentos en
+    una colección llamada People.
+    Tambien puede modificar, eliminar y buscar un registro especifico.
+
+
 ¿Como usar esta proyecto?
 
     -- Instalar Docker
@@ -16,12 +23,15 @@
     --Existe un Documento llamado callApi.http,copiar las llamadas en postman y probar que las llamadas esten funcionando
 
 
-    --Si desea rellenar la base de mongo con data, puede ingrsar a MONGODB(Aplicacion) en la coleccion usada que es PEOPLE
-        precionar ADD DATA, INSERT DOCUMENT y por ultimo copiar el contenido de Bootcam Collection y aceptar.
+    --Si desea rellenar la base de mongo con data:
+        * Puede ingrsar a MONGODB(Aplicacion)
+        * En la coleccion usada que es PEOPLE precionar ADD DATA y INSERT DOCUMENT 
+        * Por ultimo copiar el contenido de Bootcam Collection y aceptar.
+        * Listo tenemos datos cargados
     
 
 
-#Material de apoyo utilizado
+Material de apoyo utilizado
   * https://www.youtube.com/watch?v=vm3YfOHf_Cc by yoursTRULY
   * https://www.youtube.com/watch?v=PsWeSg38XFY by ProgrammingKnowledge
 
