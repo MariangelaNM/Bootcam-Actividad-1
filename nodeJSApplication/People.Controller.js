@@ -1,10 +1,10 @@
 const createError = require('http-errors');
 const mongoose = require('mongoose');
 
-const People = require('../Models/People.model');
+const People = require('./People.model');
 
 module.exports = {
-  getAllPeoples: async (req, res, next) => {
+  getAllPeoples: async (req, res, next) => { // traer todos los registros en tabl.People
     try {
       const results = await People.find({}, { __v: 0 });
       res.send(results);
@@ -13,7 +13,7 @@ module.exports = {
     }
   },
 
-  createNewPeople: async (req, res, next) => {
+  createNewPeople: async (req, res, next) => {// crea un nuevo regirstro 
     try {
       const people = new People(req.body);
       const result = await people.save();
@@ -28,7 +28,7 @@ module.exports = {
     }
   },
 
-  findPeopleById: async (req, res, next) => {
+  findPeopleById: async (req, res, next) => {//busca por id
     const id = req.params.id;
     try {
       const people = await People.findById(id);
@@ -46,7 +46,7 @@ module.exports = {
     }
   },
 
-  updateAPeople: async (req, res, next) => {
+  updateAPeople: async (req, res, next) => {//Actualiza un registro en especifico
     try {
       const id = req.params.id;
       const updates = req.body;
@@ -67,11 +67,10 @@ module.exports = {
     }
   },
 
-  deleteAPeople: async (req, res, next) => {
+  deleteAPeople: async (req, res, next) => { // elimina un registro en especifico
     const id = req.params.id;
     try {
       const result = await People.findByIdAndDelete(id);
-      // console.log(result);
       if (!result) {
         throw createError(404, 'Person does not exist.');
       }
