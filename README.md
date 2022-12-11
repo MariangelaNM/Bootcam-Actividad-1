@@ -1,9 +1,10 @@
 # Bootcam-Actividad-1
 
 ¿Que hace este proyecto?
-    Conectarse a un mongo dockerizado y crear una ruta que, mediante un GET, devuelva todos los documentos en
-    una colección llamada People.
-    Tambien puede modificar, eliminar y buscar un registro especifico.
+
+        Conectarse a un mongo dockerizado y crear una ruta que, mediante un GET, devuelva todos los documentos en
+        una colección llamada People.
+        Tambien puede modificar, eliminar y buscar un registro especifico.
 
 
 ¿Como usar esta proyecto?
